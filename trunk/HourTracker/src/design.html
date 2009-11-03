@@ -1,0 +1,33 @@
+<h1>Hourtracker design</h1>
+
+<h2>Gui TDA (Tell, Don't Ask)</h2>
+
+<h2>Wishes</h2>
+<ol>
+<li>See how much we deviate from the 8 hours per day schedule, for any month.</li>
+<li>Create a new task</li>
+<li>Activate a task</li>
+<li>Correct wrong hours</li>
+<li>Round to quarters of an hour per day/ per week</li>
+<li>Show worked intervals per task</li>
+</ol>
+
+<h2>Activating a task</h2>
+When a task in the list is double clicked it is activated.
+The title of the main view changes to the name of the task 
+so the user can see in the task bar which task is currently active.
+
+<h2>How to store timestamps?</h2>
+We have to be able to easily calculate time between two timestamps.
+We have to be able to (convert it to) see the date and clock hour and minute (maybe even second), e.g. Sep 12, 2008 14:53:16.
+
+Do we really need the day notion? 
+If we just encode the time in the day, and be able to calculate the elapsed time between two of those times wouldn't that be enough?
+How would we get totals for a week? 
+You could just select the set of days you want totalized, without the program understanding the week concept.
+
+We could make a very simple date class that can have 1-31 as day, 1-12 as month and any number as year.
+It would be possible to create non-existent dates, but it also allows for grouping by month and year.
+Grouping by week is not really needed.
+
+Avoid the heavy, complex feeling Date and Calendar classes.
