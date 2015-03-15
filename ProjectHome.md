@@ -1,0 +1,1 @@
+Add tasks, click on task you are currently working on, and app starts counting time until you click another task.
